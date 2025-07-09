@@ -1,0 +1,164 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Aima Shah 🎉</title>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600&family=Special+Elite&display=swap" rel="stylesheet">
+<style>
+  body {margin:0; font-family:'Baloo 2', sans-serif; background:linear-gradient(135deg,#0d0d0d,#1a1a1a); color:#f5f5f5; text-align:center; overflow:hidden; position:relative;}
+  .page {display:none; padding:40px 20px; height:100vh; box-sizing:border-box;}
+  .active {display:flex; flex-direction:column; justify-content:center; align-items:center; animation:fadeIn 1s;}
+  @keyframes fadeIn {from{opacity:0;} to{opacity:1;}}
+  .intro-text {font-size:1.8em; color:gold; text-shadow:0 0 10px gold; animation:shimmer 3s infinite alternate;}
+  @keyframes shimmer {from{text-shadow:0 0 10px gold;} to{text-shadow:0 0 20px gold;}}
+  button {background:transparent; color:#f5f5f5; padding:10px 20px; border:2px solid gold; border-radius:20px; font-size:1.1em; cursor:pointer; margin-top:30px; transition:0.3s;}
+  button:hover {background:gold; color:#000;}
+  .flowing-text {font-size:2.5em; color:gold; text-shadow:0 0 10px gold; margin-bottom:10px;}
+  .flowing-letter {display:inline-block; opacity:0; transform:translateY(-50px); animation:slideDown 0.6s forwards;}
+  @keyframes slideDown {0% {transform:translateY(-50px);} 100% {transform:translateY(0); opacity:1;} }
+  .cake-part {opacity:0;}
+  .cake-animate {opacity:1; animation: fadeInUp 0.8s forwards;}
+  @keyframes fadeInUp {from{opacity:0; transform:translateY(20px);} to{opacity:1; transform:translateY(0);} }
+  .blink {animation: blinkAnim 2.5s infinite;}
+  @keyframes blinkAnim {0%, 90%, 100% {opacity:1;} 95% {opacity:0;}}
+  .smile-bounce {opacity:1; animation: smileBounce 2s infinite;}
+  @keyframes smileBounce {0%,100%{transform:translateY(0);} 50%{transform:translateY(-1px);} }
+  .blush {opacity:0; animation: blushFade 2s forwards;}
+  @keyframes blushFade {from{opacity:0;} to{opacity:0.6;} }
+  .flicker { animation: flicker 1s infinite alternate; }
+  @keyframes flicker { from{opacity:0.7;} to{opacity:1;} }
+  .sparkle, .heart {position:fixed; width:8px; height:8px; background:gold; border-radius:50%; opacity:0.8; animation:sparkleFloat 4s linear infinite;}
+  .heart {width:12px; height:12px; background:url('https://pngimg.com/uploads/heart/heart_PNG51337.png') no-repeat center/contain;}
+  .balloon {position:fixed; width:16px; height:20px; background:pink; border-radius:50% 50% 50% 50% / 60% 60% 40% 40%; animation:balloonFloat 4s ease-out forwards;}
+  @keyframes sparkleFloat {0%{transform:translateY(0);} 100%{transform:translateY(-100vh); opacity:0;} }
+  @keyframes balloonFloat {0%{transform:translateY(0);} 100%{transform:translateY(-150vh); opacity:0;} }
+  .explosion {position:fixed; top:0; left:0; width:100%; height:100%; background:radial-gradient(circle, gold, transparent); animation:explode 0.8s ease-out forwards; z-index:5;}
+  @keyframes explode {0%{opacity:1;} 100%{opacity:0;} }
+  .scroll-paper {
+    background: #fffaf0; color:#4a2e0e; padding:20px; max-width:400px; border-radius:12px;
+    font-family:'Special Elite', monospace; font-size:1.1em;
+    box-shadow:0 0 15px gold;
+    border:4px solid #d2691e; position:relative;
+  }
+  .scroll-paper::before, .scroll-paper::after {
+    content:""; position:absolute; left:0; right:0; height:15px; background:#d2691e;
+    border-radius:50%; top:-12px;
+  }
+  .scroll-paper::after { top:auto; bottom:-12px; }
+  .scroll-paper::before { box-shadow: inset 0 2px 5px rgba(0,0,0,0.2); }
+  .scroll-paper::after { box-shadow: inset 0 -2px 5px rgba(0,0,0,0.2); }
+</style>
+</head>
+<body>
+<div id="page1" class="page active">
+  <div class="intro-text">A little surprise for you, Aima…</div>
+  <button onclick="nextPage(2)">Enter</button>
+</div>
+<div id="page2" class="page">
+  <div class="flowing-text" id="flowText">🎉 Happy Birthday 🎉</div>
+  <button onclick="nextPage(3)">Click it!</button>
+</div>
+<div id="page3" class="page">
+  <svg viewBox="0 0 100 100" width="150">
+    <rect id="part1" class="cake-part" x="30" y="60" width="40" height="10" rx="3" ry="3" fill="#ffb347" />
+    <rect id="part2" class="cake-part" x="32" y="50" width="36" height="10" rx="3" ry="3" fill="#ffcc99" />
+    <rect id="part3" class="cake-part" x="34" y="42" width="32" height="8" rx="3" ry="3" fill="#ffe5b4" />
+    <rect id="part4" class="cake-part flicker" x="40" y="32" width="4" height="10" fill="gold" />
+    <rect id="part5" class="cake-part flicker" x="48" y="32" width="4" height="10" fill="gold" />
+    <rect id="part6" class="cake-part flicker" x="56" y="32" width="4" height="10" fill="gold" />
+    <circle id="eyeL" class="cake-part blink" cx="42" cy="55" r="2" fill="black"/>
+    <circle id="eyeR" class="cake-part blink" cx="58" cy="55" r="2" fill="black"/>
+    <path id="smile" class="cake-part smile-bounce" d="M44 60 Q50 64 56 60" stroke="black" stroke-width="1.5" fill="none" />
+    <circle id="blushL" class="cake-part blush" cx="38" cy="57" r="1.5" fill="pink"/>
+    <circle id="blushR" class="cake-part blush" cx="62" cy="57" r="1.5" fill="pink"/>
+  </svg>
+  <div id="msg" style="margin-top:20px; font-size:1.3em; color:gold;">Blow on your screen!</div>
+</div>
+<div id="page4" class="page"></div>
+<div id="page5" class="page">
+  <div class="scroll-paper">
+    💖 My dear Shah, in these 11 years of pure love, friendship, fights, laughter and tears, you’ve always been special for me.<br>
+    Yeah, I say I love you and try to prove it by my actions — but still, I pray you find a partner who loves you even more than I do, because you deserve it.<br>
+    Stay blessed, happy, healthy and in peace.<br> Shahoo, you’re truly loved! ❤️<br> From Veenay 💌
+  </div>
+</div>
+<script>
+function nextPage(n){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  document.getElementById('page'+n)?.classList.add('active');
+  if(n==2) { startFlowingText(); addSparkles(); addHearts(); }
+  if(n==3) { startCakeAssembly(); }
+  if(n==5) { addSparkles(); addHearts(); }
+}
+function startFlowingText(){
+  const text='Happy Birthday';
+  const container=document.getElementById('flowText');
+  container.innerHTML='';
+  text.split('').forEach((ch,i)=>{
+    let span=document.createElement('span');
+    span.textContent=ch;
+    span.className='flowing-letter';
+    span.style.animationDelay=(i*0.1)+'s';
+    container.appendChild(span);
+  });
+}
+function addSparkles(){
+  for(let i=0;i<40;i++){
+    let s=document.createElement('div');
+    s.className='sparkle';
+    s.style.left=Math.random()*100+'%';
+    s.style.bottom='0';
+    s.style.animationDelay=Math.random()*4+'s';
+    document.body.appendChild(s);
+  }
+}
+function addHearts(){
+  for(let i=0;i<20;i++){
+    let h=document.createElement('div');
+    h.className='heart';
+    h.style.left=Math.random()*100+'%';
+    h.style.bottom='0';
+    h.style.animationDelay=Math.random()*4+'s';
+    document.body.appendChild(h);
+  }
+}
+function startCakeAssembly(){
+  let parts=['part1','part2','part3','part4','part5','part6','eyeL','eyeR','smile','blushL','blushR'];
+  parts.forEach((id,i)=>{
+    setTimeout(()=>{ let el=document.getElementById(id); if(el) el.classList.add('cake-animate'); }, i*250);
+  });
+  setTimeout(()=>{
+    document.getElementById('msg').innerText='Come on blow harder!';
+    setTimeout(()=>{
+      showExplosion();
+      setTimeout(()=>{nextPage(5);},1500);
+    },2500);
+  }, parts.length*250+500);
+}
+function showExplosion(){
+  let ex=document.createElement('div');
+  ex.className='explosion';
+  document.body.appendChild(ex);
+  for(let i=0;i<30;i++){
+    let b=document.createElement('div');
+    b.className='balloon';
+    b.style.left=Math.random()*100+'%';
+    b.style.bottom='0';
+    document.body.appendChild(b);
+    setTimeout(()=>{b.remove();},4000);
+  }
+  for(let i=0;i<20;i++){
+    let h=document.createElement('div');
+    h.className='heart';
+    h.style.left=Math.random()*100+'%';
+    h.style.bottom='0';
+    document.body.appendChild(h);
+    setTimeout(()=>{h.remove();},4000);
+  }
+  setTimeout(()=>{ex.remove();},1000);
+}
+</script>
+</body>
+</html>
